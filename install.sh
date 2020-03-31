@@ -18,4 +18,4 @@ echo -e "\t"\"password\":\""$rndpassword"\""," >> $filename
 echo -e "\t"\"timeout\":600"," >> $filename
 echo -e "\t"\"method\":\"chacha20-ietf\" >> $filename
 echo "}" >> $filename
-sudo ssserver -c $configdir"/"$filename -d start && rm -rf $0 && echo -e "\n结果\n\033[34mSsserver已经启动\033[0m, 端口是:\033[34m"$rndport"\033[0m, 密码是:\033[34m"$rndpassword"\033[0m, 配置文件位于:\033[34m"$configdir"/"$filename"\033[0m\n\n额外说明:\n启动命令: sudo ssserver -c $configdir"/"$filename -d start\n停止命令: sudo ssserver -c $configdir"/"$filename -d stop\n重启命令: sudo ssserver -c $configdir"/"$filename -d restart\n"
+sudo ssserver -c $configdir"/"$filename -d start && rm -rf $0 && echo -e "\n\n\033[34mSsserver已经启动\033[0m, 端口是:\033[34m"$rndport"\033[0m, 密码是:\033[34m"$rndpassword"\033[0m, 配置文件位于:\033[34m"$configdir"/"$filename"\033[0m,可自行修改, 但需重启. \n\n说明:\nssserver启动命令: sudo ssserver -c $configdir"/"$filename -d start\nssserver停止命令: sudo ssserver -c $configdir"/"$filename -d stop\nssserver重启命令: sudo ssserver -c $configdir"/"$filename -d restart\n"
