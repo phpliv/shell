@@ -18,4 +18,4 @@ echo -e "\t"\"password\":\""$rndpassword"\""," >> $filename
 echo -e "\t"\"timeout\":600"," >> $filename
 echo -e "\t"\"method\":\"chacha20-ietf\" >> $filename
 echo "}" >> $filename
-sudo ssserver -c $configdir"/"$filename -d start && rm -rf $0 && echo "结果===>ssserver已经启动, 端口是:"$rndport", 密码是:"$rndpassword", 配置文件位于:"$configdir"/"$filename
+sudo ssserver -c $configdir"/"$filename -d start && rm -rf $0 && echo -e "结果===>"\033[31m"Ssserver已经启动"\033[0m", 端口是:"\033[31m""$rndport""\033[0m", 密码是:"\033[31m""$rndpassword""\033[0m", 配置文件位于:"\033[31m""$configdir"/"$filename"\033[0m"
