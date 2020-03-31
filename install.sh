@@ -9,7 +9,7 @@ rndport=$(mimvp_app_rand 1024 65535)
 rndpassword=$(date +%s%N | md5sum | head -c 30)
 filename=config.json
 basedir=`cd \`dirname $0\`; pwd`
-configdir=$(dirname $(dirname "$PWD"))
+configdir=`cd \`dirname $basedir\`; pwd`
 echo "{" > $filename
 echo -e "\t"\"server\":\"::\""," >> $filename
 echo -e "\t"\"server_port\":"$rndport""," >> $filename
