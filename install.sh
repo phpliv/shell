@@ -8,7 +8,7 @@ function mimvp_app_rand(){
 rndport=$(mimvp_app_rand 1024 65535)
 rndpassword=$(date +%s%N | md5sum | head -c 30)
 filename=config.json
-rndmethod=chacha20-ietf
+rndmethod=xchacha20-ietf-poly1305
 basedir=`cd \`dirname $0\`; pwd`
 configdir=`cd \`dirname $basedir\`; pwd`
 echo "{" > $filename
